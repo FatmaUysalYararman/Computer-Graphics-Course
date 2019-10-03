@@ -1,0 +1,15 @@
+# CENG 487 Assignment# by
+# Fatma UYSAL
+# StudentId: 220201051
+# 03 2019
+
+class Shape:
+
+    def __init__(self, vertices, stack):
+        self.vertices = vertices
+        self.processStack = stack
+
+    def process(self):
+        for matrix in self.processStack:
+            for i, vertex in enumerate(self.vertices):
+                self.vertices[i] = matrix.multiplication(vertex)
